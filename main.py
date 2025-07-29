@@ -41,7 +41,7 @@ def create_docx_from_json(json_data, output_file):
                 image.save(img_byte_arr, format='PNG')
                 img_byte_arr.seek(0)
                 # Add image to document
-                doc.add_picture(img_byte_arr, width=Inches(4.0))
+                doc.add_picture(img_byte_arr, width=Inches(5.0))
             except Exception as e:
                 # If image generation or download fails, add placeholder text
                 doc.add_paragraph(f"[Không thể tạo hoặc tải ảnh: {str(e)}]")
