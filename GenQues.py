@@ -34,7 +34,7 @@ class MainWindow(QWidget):
         pdf_layout.addWidget(self.pdf_button)
 
         # (3) QHBoxLayout2 - Đường dẫn Prompt.txt
-        self.prompt_label = QLabel("Chưa chọn file prompt.txt")
+        self.prompt_label = QLabel("Chưa chọn file prompt")
         self.prompt_label.setFont(font)
         self.prompt_label.setFixedHeight(30)
         self.prompt_label.setStyleSheet("border: 1px solid black; padding: 3px;")
