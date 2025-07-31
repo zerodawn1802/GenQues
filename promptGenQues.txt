@@ -62,14 +62,18 @@
          "Nội dung câu hỏi" : Nội dung của câu hỏi theo cấu trúc.
       }
    ]
-* Lưu ý:
-   + Trả về duy nhất nội dung yêu cầu, không thêm bất kỳ nội dung nào khác.
-   + Cấu trúc bắt buộc như đã đề cập (Đảm bảo đầy đủ xuống dòng, ####, cấu trúc, ...)
-   + Nội dung câu hỏi tuyệt đối không chứa ảnh hoặc link ảnh.
-   + Câu hỏi không được có nội dung tương tự nhau.
-   + Câu hỏi đa dạng, mỗi dạng câu hỏi có ít nhất 2 câu.
-   + Có thể có nhiều câu hỏi trong một câu hỏi trắc nghiệm 4 đáp án có học liệu.
-   + Sinh ít nhất 2 câu hỏi có ảnh ngoài file đính kèm.
-   + Mô tả ảnh phải đáp ứng được yêu cầu đầu vào của Gemini Image Generator, mô tả bằng tiếng anh.
-   + Ít nhất 10 câu hỏi.
-   + Nếu có công thức toán học, sử dụng LaTeX với cặp dấu $ để bao quanh công thức.
+* Gợi ý:
+   - Có thể sử dụng nội dung bên ngoài tương tự nội dung bài học trong tài liệu.
+* Yêu cầu trả về:
+   - Về cấu trúc:
+      + Bắt buộc giống với cấu trúc của từng dạng câu hỏi đã đề cập. (Đảm bảo đầy đủ xuống dòng, "####", ...)
+      + Trả về duy nhất nội dung yêu cầu. (Không thêm bất cứ yếu tố nào như: "Tôi đã hiểu...", "Dưới đây là...", "```json", ...)
+      + Tùy vào độ đa dạng của nội dung, số lượng câu hỏi không dưới 50.
+      + Số lượng câu hỏi mỗi dạng không quá 50% tổng số câu.
+      + Các câu trắc nghiệm 4 đáp án có học liệu có số câu hỏi trắc nghiệm không dưới 2.
+   - Về nội dung:
+      + Các câu hỏi không được phép có nội dung tương tự nhau.
+      + Mô tả ảnh phải ngắn gọn, rõ ràng và bằng tiếng Anh.
+      + Nếu nội dung câu hỏi có chứa các công thức toán học, sử dụng LaTeX với cặp dấu $...$.
+      + Nếu câu hỏi có sử dụng nội dung trong file đính kèm, cần trích dẫn đầy đủ toàn bộ nội dung đó.
+      + Trường "Nội dung câu hỏi" không chứa hình ảnh.
